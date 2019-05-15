@@ -10,6 +10,7 @@ namespace Palindrome
     {
         static void Main(string[] args)
         {
+			EnterWord:
             Console.WriteLine("Please enter a word");
             string word = Console.ReadLine();
 
@@ -18,7 +19,7 @@ namespace Palindrome
                 if (Char.IsWhiteSpace(word[i]))
                 {
                     Console.WriteLine("It should be only one word without spaces");
-                    return;
+                    goto EnterWord;
                 }
             }
 
